@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ESNext", 
-    "module": "CommonJS", 
+    "target": "ESNext",
+    "module": "CommonJS",
     "resolveJsonModule": true,
     "outDir": "./dist",
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {},
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   },
   "include": [
     "src/**/*"

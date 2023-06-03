@@ -1,11 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
+import Counter from '../components/Counter'
+import { signal } from '@preact/signals'
+
+const count = signal(0);
 
 ---
 
 <Layout title='Welcome to Astro.'>
 	<main>
+
+		<Counter count={count} client:visible>
+			<h1>Hello, Preact 1!</h1>
+		</Counter>
+
+		<Counter count={count} client:visible>
+			<h1>Hello, Preact 2!</h1>
+		</Counter>
+
 		<h1>Welcome to <span class='text-gradient'>Astro</span></h1>
 		<p class='instructions'>
 			To get started, open the directory <code>src/pages</code> in your project.<br />
