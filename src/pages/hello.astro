@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { endpoints } from '../config/endpoints.js'
+
+const domainUrl = import.meta.env.DOMAIN_URL
+const url = `${domainUrl}${endpoints.hello}`
+const response = await fetch(url)
+const responseJson = await response.json()
+---
+
+<Layout title='Welcome to Astro.'>
+	<main>
+		<h1 class='text-3xl'>Astro dummy page</h1>
+		<p>Here is some data from the API:</p>
+		<pre>{JSON.stringify(responseJson, null, 2)}</pre>
+	</main>
+</Layout>
