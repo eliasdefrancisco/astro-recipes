@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import Card from '../components/Card.astro'
 import Counter from '../components/Counter'
 import { signal } from '@preact/signals'
+import Button from 'src/components/Button'
 
 const count = signal(0);
 
@@ -12,14 +13,18 @@ const count = signal(0);
 	<main>
 
 		<Counter count={count} client:visible>
-			<h1>Hello, Preact 1!</h1>
+			<h1 class='text-3xl'>Hello, Preact 1!</h1>
 		</Counter>
 
 		<Counter count={count} client:visible>
-			<h1>Hello, Preact 2!</h1>
+			<h1 class='text-3xl'>Hello, Preact 2!</h1>
 		</Counter>
 
-		<h1>Welcome to <span class='text-gradient'>Astro</span></h1>
+		<div class='flex justify-center mb-8'>
+			<Button text='Button Confetti !!' client:visible/>
+		</div>
+
+		<h1 class='text-3xl'>Welcome to <span class='text-gradient'>Astro</span></h1>
 		<p class='instructions'>
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
@@ -55,11 +60,11 @@ const count = signal(0);
 		padding: 1.5rem;
 		max-width: 60ch;
 	}
-	h1 {
+	/* h1 {
 		font-size: 3rem;
 		font-weight: 800;
 		margin: 0;
-	}
+	} */
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
