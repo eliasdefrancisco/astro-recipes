@@ -1,5 +1,9 @@
 # Proyecto en Astro incluyendo varia tecnologías útiles
 
+## Sitemaps
+
+Al compilar el proyecto se generan los archivos de sitemaps en la carpeta /dist
+
 ## Blog
 
 La implementacion de Blog, ha requerido establecer la configuracion del 'output' a 'hybrid', es actualmente una feature experimental y permite tener definidos por defecto las paginas como estaticas para que su generación sea en tiempo de compilación.
