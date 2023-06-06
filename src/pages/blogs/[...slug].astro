@@ -1,0 +1,54 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content'
+import Layout from '../../layouts/Layout.astro'
+import BlogPost from '../../layouts/BlogPost.astro'
+
+export async function getStaticPaths () {
+	const posts = await getCollection('markdown')
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: post
+	}))
+}
+type Props = CollectionEntry<'markdown'>;
+
+const post = Astro.props
+const { Content } = await post.render();
+---
+<Layout title={post.data.title} description={post.data.description} >
+	<BlogPost {...post.data}>
+		<div class='markdown-style-69'>
+			<Content />
+		</div>
+	</BlogPost>
+</Layout>
+
+<style is:global>
+	.markdown-style-69 blockquote {
+		padding: 20px;
+		margin: 20px 0;
+		border-left: 5px solid #34a853;
+		background-color: #e8f5e9;
+		color: #333;
+		font-style: italic;
+		font-size: 1.2em;
+		box-shadow: 2px 2px 15px #BFBFBF;
+		position: relative;
+	}
+	.markdown-style-69 blockquote::before {
+		content: open-quote;
+		font-size: 4em;
+		color: #34a853;
+		position: absolute;
+		left: 10px;
+		top: -10px;
+	}
+	.markdown-style-69 blockquote::after {
+		content: close-quote;
+		font-size: 4em;
+		color: #34a853;
+		position: absolute;
+		right: 10px;
+		bottom: -10px;
+	}
+</style>
