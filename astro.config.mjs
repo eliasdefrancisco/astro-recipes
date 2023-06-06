@@ -3,12 +3,13 @@ import preact from '@astrojs/preact'
 import node from '@astrojs/node'
 import sitemap from '@astrojs/sitemap'
 import { configDotenv } from 'dotenv'
+import prefetch from '@astrojs/prefetch'
 
 configDotenv()
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [preact(), sitemap()],
+	integrations: [preact(), sitemap(), prefetch({ throttle: 3 })],
 	output: 'hybrid',
 	experimental: {
 		hybridOutput: true
