@@ -1,0 +1,46 @@
+:root {
+	--color-electric-green: #BCEF38;
+	--color-electric-pink: #D750C7;
+	--color-electric-blue: #3943DC;
+	--color-electric-yellow: #FFFF3C;
+	--color-gray-1: #050508;
+	--color-gray-2: #1a1a20;
+	--color-gray-3: #3b3943;
+	--color-gray-4: #67606e;
+	--color-gray-5: #969799;
+}
+
+.button-success,
+.button-error,
+.button-warning,
+.button-secondary {
+		margin: 0.2rem;
+		background-color: var(--color-gray-1);
+		border-style: solid;
+		font-weight: 500;
+
+		&:hover {
+				background-color: var(--color-gray-3);
+				box-shadow: 0 0 5px 2px var(--color-electric-pink);
+		}
+}
+
+.button-success {
+		border-color: var(--color-electric-pink);
+		color: var(--color-electric-yellow);
+}
+
+.button-error {
+	border-color: red;
+	color: red
+}
+
+.button-warning {
+	border-color: var(--color-electric-yellow);
+	color: var(--color-electric-yellow);
+}
+
+.button-secondary {
+	border-color: var(--color-electric-blue);
+	color: var(--color-electric-yellow);
+}

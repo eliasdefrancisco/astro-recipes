@@ -10,12 +10,13 @@ function getActiveTailWind (link) {
 		<li class='item'><a href='/' class={getActiveTailWind('/')}>Home</a></li>
 		<li class='item'><a href='/hello' class={getActiveTailWind('/hello')}>Hello</a></li>
 		<li class='item'><a href='/blogs' class={getActiveTailWind('/blogs')}>Blogs</a></li>
+		<li class='item'><a href='/appwrite' class={getActiveTailWind('/appwrite')}>Appwrite</a></li>
 	</ul>
 </nav>
 
 <style>
 	.nav {
-		background-color: #3b82f6;
+		background-color: var(--color-electric-blue);
 		padding: 0.5rem;
 	}
 	.list {
@@ -27,10 +28,13 @@ function getActiveTailWind (link) {
 	.item {
     color: white;
     text-decoration: none;
+		&:hover {
+			text-shadow: var(--color-electric-yellow) 1px 0 10px;
+		}
 	}
 	.itemActive {
     text-decoration: none;
 		font-weight: bold;
-		color: #f59e0b;
+		color: var(--color-electric-yellow);
 	}
 </style>

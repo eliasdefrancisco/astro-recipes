@@ -1,5 +1,9 @@
 # Proyecto en Astro incluyendo varia tecnologías útiles
 
+## CSS
+
+Se ha implementado Pure-css, en la carpeta styles, también un archivo, globals.css para clases globales y variables. Para modificación de componentes, se hace desde la etiqueta < style > del template o el componente en cuestión
+
 ## Sitemaps
 
 Al compilar el proyecto se generan los archivos de sitemaps en la carpeta /dist
