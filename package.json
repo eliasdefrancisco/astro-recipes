@@ -18,6 +18,7 @@
     "@fontsource/caveat-brush": "^5.0.2",
     "@fontsource/spectral": "^5.0.2",
     "@fontsource/ubuntu-mono": "^5.0.2",
+    "appwrite": "^11.0.0",
     "astro": "^2.5.7",
     "canvas-confetti": "^1.6.0",
     "dotenv": "^16.1.3",
