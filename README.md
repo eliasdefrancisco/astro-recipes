@@ -1,5 +1,14 @@
 # Proyecto en Astro incluyendo varia tecnologías útiles
 
+Algunos datos útiles
+## Fonts
+
+Se han implementado las funtente usando [Fontsource](https://fontsource.org)
+Hay que instalar la fuente en concreto con npm
+Hay que hacer los imports de la fuente y las variantes a usar
+Hay que usarla desde css con font-family y font-weight
+
+
 ## CSS
 
 Se ha implementado Pure-css, en la carpeta styles, también un archivo, globals.css para clases globales y variables. Para modificación de componentes, se hace desde la etiqueta < style > del template o el componente en cuestión

@@ -10,13 +10,23 @@ const count = signal(0);
 <Layout title='Welcome to Astro.'>
 	<main>
 
+		<h1>Pruebas varias e implementaciones de mrElaya</h1>
+
 		<Counter count={count} client:visible>
-			<h1>Hello, Preact 1!</h1>
+			<p>Hello, Preact 1!</p>
 		</Counter>
 
 		<Counter count={count} client:visible>
-			<h1>Hello, Preact 2!</h1>
+			<p>Hello, Preact 2!</p>
 		</Counter>
 
+		<button class="button-success pure-button" onclick="alert('algo')">
+			Esto hace algo
+		</button>
 	</main>
 </Layout>
+
+<style>
+	main {
+		text-align: center;
+	}

@@ -2,6 +2,12 @@
 import '../styles/pure-min.css'
 import '../styles/global.css'
 
+import '@fontsource/ubuntu-mono'
+import '@fontsource/caveat-brush'
+import '@fontsource/spectral/200.css'
+import '@fontsource/spectral/400.css'
+import '@fontsource/spectral/700.css'
+
 import Navigation from '../components/Navigation.astro'
 
 export interface Props {
@@ -43,8 +49,8 @@ const { description } = Astro.props
 	h4,
 	h5,
 	h6 {
-			color: var(--color-electric-pink);
-			font-weight: 500;
+		font-family: 'Caveat Brush', sans-serif;
+		color: var(--color-electric-pink);
 	}
 
 	p,
@@ -52,11 +58,29 @@ const { description } = Astro.props
 	a,
 	ul,
 	li {
-			color: var(--color-electric-yellow);
-			font-weight: 400;
+		font-family: 'Spectral', sans-serif;
+		color: var(--color-electric-yellow);
+		font-weight: 400;
+	}
+
+	pre,
+	ul,
+	li {
+		font-family: 'Ubuntu Mono', sans-serif;
+	}
+
+	pre {
+		margin: 0;
 	}
 
 	a {
 		color: var(--color-electric-green);
+		text-decoration: none;
+		font-style: italic;
+	}
+
+	button,
+	button.pure-button {
+		font-family: 'Ubuntu Mono', sans-serif;
 	}
 </style>
